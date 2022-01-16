@@ -6,6 +6,7 @@ import java.util.Random;
 
 import javax.swing.JButton;
 import javax.swing.JFrame;
+import javax.swing.JLabel;
 import javax.swing.JPanel;
 
 class Rect {
@@ -22,6 +23,7 @@ class MyPanel extends JPanel {
 	Random ran;
 	int a = 1;
 	JButton restartButton = new JButton();
+	JLabel timer = new JLabel();
 
 	MyPanel() {
 		setLayout(null);
@@ -40,9 +42,14 @@ class MyPanel extends JPanel {
 			}
 		}
 		num_shuffle();
+		
 		restartButton.setLabel("RESTART");
 		restartButton.setBounds(145, 350, 100, 50);
 		add(restartButton);
+		
+		timer.setText("0 second"); // sample
+		timer.setBounds(170, 13, 100, 50);
+		add(timer);
 	}
 
 	public void num_shuffle() {
@@ -80,10 +87,11 @@ public class GamingFrame extends JFrame {
 
 	GamingFrame() {
 		setTitle("1 to 50 Play");
-		setSize(400, 500);
+		setSize(400, 468);
 		setLocationRelativeTo(null);
 		MyPanel mp = new MyPanel();
 		setContentPane(mp);
+		setResizable(false);
 		setVisible(true);
 	}
 

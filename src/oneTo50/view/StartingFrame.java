@@ -15,6 +15,7 @@ public class StartingFrame extends JFrame {
 		setDefaultCloseOperation(3);
 		setLocationRelativeTo(null);
 		getContentPane().setLayout(null);
+		setResizable(false);
 		
 		playButton = new JButton();
 		playButton.setBounds(150, 80, 100, 40);
