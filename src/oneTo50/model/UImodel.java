@@ -71,6 +71,10 @@ public class UImodel {
 					rect.num = rectNumber;
 					usedNumber[rectNumber - 26] = true;
 					break;
+				} else if (currentNumber > 25) {
+					rect.num = 0;
+					rect.color = Color.BLUE;
+					break;
 				}
 			}
 		} else {
