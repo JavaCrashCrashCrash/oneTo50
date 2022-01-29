@@ -12,7 +12,7 @@ public class MyPanel extends JPanel {
     int a = 1;
     JButton restartButton = new JButton();
     JLabel timer = new JLabel();
-    UImodel uimodel;
+    public UImodel uimodel;
     Rect[] rects;
 
     MyPanel(UImodel uimodel) {

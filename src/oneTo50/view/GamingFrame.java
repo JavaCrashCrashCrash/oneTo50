@@ -1,21 +1,15 @@
 package oneTo50.view;
 
+import javax.swing.JFrame;
+
 import oneTo50.controller.GameController;
-import oneTo50.model.Rect;
+import oneTo50.controller.RestartController;
 import oneTo50.model.UImodel;
 
-import java.awt.Color;
-import java.awt.Graphics;
-import java.util.Random;
-
-import javax.swing.JButton;
-import javax.swing.JFrame;
-import javax.swing.JLabel;
-import javax.swing.JPanel;
-
 public class GamingFrame extends JFrame {
+		public UImodel uiModel;
 
-	GamingFrame() {
+	public GamingFrame() {
 		UImodel uiModel = new UImodel();
 		setTitle("1 to 50 Play");
 		setSize(400, 468);
@@ -28,12 +22,8 @@ public class GamingFrame extends JFrame {
 
 		GameController gameController = new GameController(uiModel, mp);
 		addMouseListener(gameController);
+		
+		RestartController restartController = new RestartController(uiModel, mp);
+		mp.restartButton.addMouseListener(restartController);
 	}
-
-	public static void main(String[] args) {
-		// test
-		GamingFrame gf = new GamingFrame();
-
-	}
-
 }

@@ -9,7 +9,7 @@ public class RankingFrame extends JFrame {
 	String[] top10 = {"Kim", "Lee", "Park", "Choi", "Jung", "Kang", "Cho", "Yoon", "Jang", "Lim"};
 	JList top10List;
 	
-	RankingFrame() {
+	public RankingFrame() {
 		setTitle("Ranking");
 		setSize(250, 280);
 		setLocationRelativeTo(null);

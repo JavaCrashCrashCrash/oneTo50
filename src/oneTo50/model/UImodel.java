@@ -4,8 +4,8 @@ import java.awt.*;
 import java.util.Random;
 
 public class UImodel {
-	int currentNumber = 1;
-	boolean[] usedNumber = new boolean[25];
+	public int currentNumber = 1;
+	public boolean[] usedNumber = new boolean[25];
 	private Rect[] rects = new Rect[25];
 
 	public Rect[] getRects() {

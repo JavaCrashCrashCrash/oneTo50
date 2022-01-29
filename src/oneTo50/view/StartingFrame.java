@@ -1,10 +1,10 @@
 package oneTo50.view;
 
-import java.awt.BorderLayout;
-
 import javax.swing.JButton;
 import javax.swing.JFrame;
-import javax.swing.JPanel;
+
+import oneTo50.controller.RankingController;
+import oneTo50.controller.StartingController;
 
 public class StartingFrame extends JFrame {
 	JButton playButton, rankingButton;
@@ -28,6 +28,12 @@ public class StartingFrame extends JFrame {
 		add(rankingButton);
 		
 		setVisible(true);
+		
+		StartingController startingController = new StartingController(playButton);
+		playButton.addMouseListener(startingController);
+		
+		RankingController rankingContoller = new RankingController(rankingButton);
+		rankingButton.addMouseListener(rankingContoller);
 	}
 
 	public static void main(String[] args) {
