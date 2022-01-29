@@ -5,6 +5,7 @@ import java.awt.event.MouseListener;
 
 import javax.swing.JButton;
 
+import oneTo50.model.RankerList;
 import oneTo50.view.GamingFrame;
 
 public class StartingController implements MouseListener{
@@ -12,6 +13,7 @@ public class StartingController implements MouseListener{
 	
 	public StartingController(JButton play) {
 		this.play = play;
+		RankerList rankerList = new RankerList();
 	}
 	
 

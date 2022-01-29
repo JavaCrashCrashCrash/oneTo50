@@ -1,11 +1,12 @@
 package oneTo50.controller;
 
+import java.awt.event.MouseEvent;
+import java.awt.event.MouseListener;
+
 import oneTo50.model.Rect;
 import oneTo50.model.UImodel;
 import oneTo50.view.MyPanel;
-
-import java.awt.event.MouseEvent;
-import java.awt.event.MouseListener;
+import oneTo50.view.RecordingFrame;
 
 public class GameController implements MouseListener {
 	UImodel uiModel;
@@ -21,6 +22,10 @@ public class GameController implements MouseListener {
 		Rect rect = uiModel.whoAmI(e.getX(), e.getY());
 		System.out.println(e.getX() + " " + e.getY());
 		uiModel.compare(rect);
+		if(uiModel.currentNumber == 50) {
+			RecordingFrame rf = new RecordingFrame();
+		}
+			
 		mp.repaint();
 	}
 

@@ -7,7 +7,7 @@ import oneTo50.controller.RestartController;
 import oneTo50.model.UImodel;
 
 public class GamingFrame extends JFrame {
-		public UImodel uiModel;
+	public UImodel uiModel;
 
 	public GamingFrame() {
 		UImodel uiModel = new UImodel();
@@ -22,7 +22,7 @@ public class GamingFrame extends JFrame {
 
 		GameController gameController = new GameController(uiModel, mp);
 		addMouseListener(gameController);
-		
+
 		RestartController restartController = new RestartController(uiModel, mp);
 		mp.restartButton.addMouseListener(restartController);
 	}
