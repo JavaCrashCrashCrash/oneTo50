@@ -1,6 +1,6 @@
 package oneTo50.model;
 
-import java.awt.*;
+import java.awt.Color;
 
 public class Rect {
     public int x;

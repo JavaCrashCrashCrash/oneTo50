@@ -19,12 +19,7 @@ public class RestartController implements MouseListener{
 	@Override
 	public void mouseClicked(MouseEvent e) {
 		// TODO Auto-generated method stub
-		mp.uimodel.currentNumber = 1;
-		for (boolean b : mp.uimodel.usedNumber) {
-			b = false;
-		}
-		mp.uimodel.setRects();
-		mp.uimodel.numShuffle();
+		uiModel.init();
 		mp.repaint();
 	}
 

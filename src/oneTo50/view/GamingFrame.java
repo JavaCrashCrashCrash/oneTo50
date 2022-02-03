@@ -11,6 +11,7 @@ public class GamingFrame extends JFrame {
 
 	public GamingFrame() {
 		UImodel uiModel = new UImodel();
+		uiModel.init();
 		setTitle("1 to 50 Play");
 		setSize(400, 468);
 		setLocationRelativeTo(null);
@@ -21,7 +22,8 @@ public class GamingFrame extends JFrame {
 		setVisible(true);
 
 		GameController gameController = new GameController(uiModel, mp);
-		addMouseListener(gameController);
+//		addMouseListener(gameController);
+		mp.addMouseListener(gameController);
 
 		RestartController restartController = new RestartController(uiModel, mp);
 		mp.restartButton.addMouseListener(restartController);

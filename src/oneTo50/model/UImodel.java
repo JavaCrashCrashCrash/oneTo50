@@ -7,9 +7,16 @@ import java.util.Set;
 
 public class UImodel {
 	public int currentNumber = 1;
-//	public boolean[] usedNumber = new boolean[25];
-	Set<Boolean> usedNumber = new HashSet<>();
 	private Rect[] rects = new Rect[25];
+
+	public UImodel () {
+	}
+
+	public void init() {
+		currentNumber = 1;
+		setRects();
+		numShuffle();
+	}
 
 	public Rect[] getRects() {
 		return rects;
@@ -65,21 +72,14 @@ public class UImodel {
 	public void compare(Rect rect) {
 		if (rect.num == currentNumber) {
 			// refresh view
-			currentNumber++;
 			// creation random number and set number
-			Random random = new Random();
-			while (true) {
-				int rectNumber = random.nextInt(24) + 26;
-				if (usedNumber[rectNumber - 26] == false) {
-					rect.num = rectNumber;
-					usedNumber[rectNumber - 26] = true;
-					break;
-				} else if (currentNumber > 25) {
-					rect.num = 0;
-					rect.color = Color.BLUE;
-					break;
-				}
+			if (currentNumber > 25) {
+				rect.num = 0;
+				rect.color = Color.BLUE;
+			} else {
+				rect.num = rect.back;
 			}
+			currentNumber++;
 		} else {
 			// ignore
 			System.out.println("Wrong Click");
