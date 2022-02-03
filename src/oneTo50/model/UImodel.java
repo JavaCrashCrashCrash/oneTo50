@@ -1,11 +1,14 @@
 package oneTo50.model;
 
-import java.awt.*;
+import java.awt.Color;
+import java.util.HashSet;
 import java.util.Random;
+import java.util.Set;
 
 public class UImodel {
 	public int currentNumber = 1;
-	public boolean[] usedNumber = new boolean[25];
+//	public boolean[] usedNumber = new boolean[25];
+	Set<Boolean> usedNumber = new HashSet<>();
 	private Rect[] rects = new Rect[25];
 
 	public Rect[] getRects() {
